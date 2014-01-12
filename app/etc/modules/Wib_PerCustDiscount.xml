@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wib_PerCustDiscount>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wib_PerCustDiscount>
+    </modules>
+</config>
