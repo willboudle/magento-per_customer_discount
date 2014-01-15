@@ -1,60 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <Wib_PerCustDiscount>
-            <version>0.1.0</version>
-        </Wib_PerCustDiscount>
+        <Wib_Percustdiscount>
+            <version>0.1.1</version>
+        </Wib_Percustdiscount>
     </modules>
     <global>
-
         <models>
             <wbdispatcher>
-                <class>Wib_PerCustDiscount_Model</class>
+                <class>Wib_Percustdiscount_Model</class>
             </wbdispatcher>
         </models>
-
         <events>
             <catalog_product_get_final_price>
                 <observers>
-                    <Wib_PerCustDiscount_price_observer>
+                    <Wib_Percustdiscount_price_observer>
                         <type>singleton</type>
-                        <class>Wib_PerCustDiscount_Model_Observer</class>
+                        <class>Wib_Percustdiscount_Model_Observer</class>
                         <method>get_final_price</method>
-                    </Wib_PerCustDiscount_price_observer>
+                    </Wib_Percustdiscount_price_observer>
                 </observers>
             </catalog_product_get_final_price>
 
             <catalog_product_collection_load_after>
                 <observers>
-                    <Wib_PerCustDiscount_price_observer>
+                    <Wib_Percustdiscount_price_observer>
                         <type>model</type>
-                        <class>Wib_PerCustDiscount_Model_Observer</class>
+                        <class>Wib_Percustdiscount_Model_Observer</class>
                         <method>get_final_list_price</method>
-                    </Wib_PerCustDiscount_price_observer>
+                    </Wib_Percustdiscount_price_observer>
                 </observers>
             </catalog_product_collection_load_after>
         </events>
-
         <resources>
-            <Wib_PerCustDiscount_Setup>
+            <Percustdiscount_setup>
                 <setup>
-                    <module>Wib_PerCustDiscount</module>
-                    <class>Wib_PerCustDiscount_Model_Resource_Eav_Mysql4_Setup</class>
+                    <module>Wib_Percustdiscount</module>
+                    <class>Wib_Percustdiscount_Model_Resource_Eav_Mysql4_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>
                 </connection>
-            </Wib_PerCustDiscount_Setup>
-            <Wib_PerCustDiscount_write>
+            </Percustdiscount_setup>
+            <Percustdiscount_write>
                 <connection>
                     <use>core_write</use>
                 </connection>
-            </Wib_PerCustDiscount_write>
-            <Wib_PerCustDiscount_read>
+            </Percustdiscount_write>
+            <Percustdiscount_read>
                 <connection>
                     <use>core_read</use>
                 </connection>
-            </Wib_PerCustDiscount_read>
+            </Percustdiscount_read>
         </resources>
     </global>
 </config>

@@ -5,7 +5,7 @@
  * Time: 2:25 PM
  */
 
-class Wib_PerCustDiscount_Model_Observer
+class Wib_Percustdiscount_Model_Observer
 {
 
     public function __construct()
@@ -20,7 +20,7 @@ class Wib_PerCustDiscount_Model_Observer
         {
             //get the current customer
             $customer = Mage::getSingleton('customer/session')->getId();
-            //load the customer and get their PerCustDiscount
+            //load the customer and get their Percustdiscount
             $customer_discount = Mage::getModel('customer/customer')->load($customer)->getPerCustDiscount();
             //var_dump($customer_discount);
 
@@ -53,10 +53,10 @@ class Wib_PerCustDiscount_Model_Observer
         {
             //get the current customer
             $customerId = Mage::getSingleton('customer/session')->getId();
-            //load the customer and get their PerCustDiscount
+            //load the customer and get their Percustdiscount
             $customer = Mage::getModel('customer/customer')->load($customerId);
             //var_dump($customer);
-            $customer_discount = $customer->getPerCustDiscount();
+            $customer_discount = $customer->getData('per_cust_discount');
 
             //convert discount to percentage
             $customer_discount = $customer_discount/100;

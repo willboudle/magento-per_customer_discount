@@ -6,5 +6,5 @@
  * Time: 1:35 PM
  * To change this template use File | Settings | File Templates.
  */ 
-class Wib_PerCustDiscount_Helper_Data extends Mage_Core_Helper_Abstract {
+class Wib_Percustdiscount_Helper_Data extends Mage_Core_Helper_Abstract {
 }

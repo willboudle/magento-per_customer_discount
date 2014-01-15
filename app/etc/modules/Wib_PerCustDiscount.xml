@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Wib_PerCustDiscount>
+        <Wib_Percustdiscount>
             <active>true</active>
             <codePool>local</codePool>
-        </Wib_PerCustDiscount>
+        </Wib_Percustdiscount>
     </modules>
 </config>
